@@ -1,0 +1,6 @@
+{
+  "pregunta": "De que se quejan en los mercados artesanales?",
+  "modelo": "qwen",
+  "respuesta_con_rag": "Los usuarios se quejan de la falta de limpieza en los mercados, especialmente en el costado sur del Mercado Central de Heredia, donde abundan los borrachos y piedreros ([1]). Además, en el Mercado De Artesanías, se mencionan trampas con vendedores estafadores que venden productos más caros que en otros lugares y se comportan de manera agresiva o manipuladora ([2]).",
+  "respuesta_sin_rag": "En los mercados artesanales de Costa Rica, se cometen quejas sobre la calidad de los productos (como técnicas mal ejecutadas o diseños obsoletos), la falta de autenticidad (artículos falsos o no genuinos) y el impacto ambiental (uso de materiales no sostenibles)."
+}

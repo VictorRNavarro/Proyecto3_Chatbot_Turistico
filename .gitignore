@@ -1,0 +1,8 @@
+.env
+.venv/
+__pycache__/
+.idea/
+data/embeddings_cache/*
+!data/embeddings_cache/.gitkeep
+resultados/trainer/
+models/clasificador_tipo_lugar/

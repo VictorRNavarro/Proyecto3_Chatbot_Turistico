@@ -1,0 +1,30 @@
+{
+  "tarea": "clasificación de tipo_lugar",
+  "modelo_base": "dccuchile/distilbert-base-spanish-uncased",
+  "seed": 42,
+  "split": {
+    "train": 3512,
+    "validation": 753,
+    "test": 753
+  },
+  "zero_shot": {
+    "n_test": 300,
+    "accuracy": 0.6266666666666667,
+    "f1_macro": 0.519770050180606
+  },
+  "fine_tuning_test": {
+    "accuracy": 0.8007968127490039,
+    "f1_macro": 0.7507367250316667,
+    "precision_macro": 0.7642315175306047,
+    "recall_macro": 0.7420261878205466
+  },
+  "etiquetas": [
+    "atraccion_turistica",
+    "hotel",
+    "mercado",
+    "museo",
+    "parque",
+    "restaurante",
+    "tour_aventura"
+  ]
+}

@@ -1,0 +1,59 @@
+[
+  {
+    "pregunta": "¿Qué hoteles tienen buena atención al cliente?",
+    "respuesta": "Los hoteles con buena atención al cliente según las reseñas son:  \n- **Hotel Alajuela City**: Recomendado por su atención excelente y personal amable.  \n- **Hotel Marriott Hacienda Belén**: Atención super profesional, detalles de servicio impecables y restaurante excelente.  \n- **Hotel Las Brumas**: Atención buena y instalaciones bien cuidadas.  \n- **Hotel Courtyard de Marriott • Alajuela**: Se menciona como un lugar excelente, aunque no se detallan aspectos específicos de atención.  \n\n¿Qué tipo de servicios ofrecen estos hoteles?",
+    "categoria_predicha": "hotel",
+    "fuentes": [
+      {
+        "lugar": "Hotel Alajuela City",
+        "tipo_lugar": "hotel",
+        "score": 0.8020356893539429
+      },
+      {
+        "lugar": "Hotel Marriott Hacienda Belén",
+        "tipo_lugar": "hotel",
+        "score": 0.7886967658996582
+      },
+      {
+        "lugar": "Hotel Las Brumas",
+        "tipo_lugar": "hotel",
+        "score": 0.7790335416793823
+      },
+      {
+        "lugar": "Hotel Courtyard de Marriott • Alajuela",
+        "tipo_lugar": "hotel",
+        "score": 0.7767767906188965
+      }
+    ]
+  },
+  {
+    "pregunta": "Dame otro del mismo tipo",
+    "respuesta": "Como alternativa, Hotel Park View (5.0 estrellas). La reseña recuperada indica: Muy buen hotel agradable",
+    "categoria_predicha": "hotel",
+    "fuentes": [
+      {
+        "lugar": "Hotel Park View",
+        "tipo_lugar": "hotel",
+        "score": 0.7677749395370483
+      }
+    ]
+  },
+  {
+    "pregunta": "¿Y ese dónde queda?",
+    "respuesta": "Sobre Hotel Park View, la reseña recuperada indica: Este hotel cuenta con una exclente ubicacion en el centro de Alajuela a una cuadra de la plaza principal. La Habitación no es muy amplia pero es suficiente y comoda, la cama es espaciosa y comoda. Baño estaba limpio y aseado cuenta con agua caliente y buen flujo de agua. Cuenta con clima (minisplit) que funciona a la perfeccion. El desayuno es tipico de CR que incluye es una porcion de fruta, pinto acompañado de huevo y cafe. Quiza consideres almorzar al poco tiempo. El personal muy atento y servicial. Ellos te pueden brindar informacion sobre algunos tours o renta de carros. Cuenta con buen Wifi y television con cable.",
+    "categoria_predicha": "hotel",
+    "fuentes": [
+      {
+        "lugar": "Hotel Park View",
+        "tipo_lugar": "hotel",
+        "score": 0.573255181312561
+      }
+    ]
+  },
+  {
+    "pregunta": "¿Cuánto cuesta un vuelo a Madrid?",
+    "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+    "categoria_predicha": "hotel",
+    "fuentes": []
+  }
+]

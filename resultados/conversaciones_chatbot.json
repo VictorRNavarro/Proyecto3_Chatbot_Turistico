@@ -1,0 +1,47 @@
+[
+  {
+    "pregunta": "¿Qué hoteles tienen buena atención al cliente?",
+    "respuesta": "Los hoteles que destacan por buena atención al cliente según las reseñas son:  \n\n1. **Hotel Alajuela City** (5.0 estrellas): Se menciona como \"muy limpio\" y \"personal muy amable\", con recomendación explícita.  \n2. **Hotel Marriott Hacienda Belén** (5.0 estrellas): Se destaca la atención \"súper amable y profesional\", el servicio en el restaurante (Carolina, Lorena y Joice) y la relación calidad-precio.  \n3. **Hotel Las Brumas** (5.0 estrellas): Se menciona \"buena atención\" y \"instalaciones bien cuidadas\", junto con la comodidad.  \n4. **Hotel Courtyard de Marriott • Alajuela** (5.0 estrellas): Se afirma como \"perfecto lugar\" y \"excelente hotel\", con comentarios generales de calidad.  \n\nTodos estos hoteles reciben calificaciones altas y comentarios específicos sobre servicio excelente.",
+    "categoria_predicha": "hotel",
+    "fuentes": [
+      {
+        "lugar": "Hotel Alajuela City",
+        "tipo_lugar": "hotel",
+        "score": 0.8020356893539429
+      },
+      {
+        "lugar": "Hotel Marriott Hacienda Belén",
+        "tipo_lugar": "hotel",
+        "score": 0.7886967658996582
+      },
+      {
+        "lugar": "Hotel Las Brumas",
+        "tipo_lugar": "hotel",
+        "score": 0.7790335416793823
+      },
+      {
+        "lugar": "Hotel Courtyard de Marriott • Alajuela",
+        "tipo_lugar": "hotel",
+        "score": 0.7767767906188965
+      }
+    ]
+  },
+  {
+    "pregunta": "Dame otro del mismo tipo",
+    "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+    "categoria_predicha": "parque",
+    "fuentes": []
+  },
+  {
+    "pregunta": "¿Y ese dónde queda?",
+    "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+    "categoria_predicha": "parque",
+    "fuentes": []
+  },
+  {
+    "pregunta": "¿Cuánto cuesta un vuelo a Madrid?",
+    "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+    "categoria_predicha": "hotel",
+    "fuentes": []
+  }
+]

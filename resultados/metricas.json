@@ -1,0 +1,450 @@
+{
+  "proyecto": "Chatbot Turístico Inteligente",
+  "modelo_generador": "qwen3:1.7b",
+  "clasificador": {
+    "tarea": "clasificación de tipo_lugar",
+    "modelo_base": "dccuchile/distilbert-base-spanish-uncased",
+    "seed": 42,
+    "split": {
+      "train": 3512,
+      "validation": 753,
+      "test": 753
+    },
+    "zero_shot": {
+      "n_test": 300,
+      "accuracy": 0.6266666666666667,
+      "f1_macro": 0.519770050180606
+    },
+    "fine_tuning_test": {
+      "accuracy": 0.8007968127490039,
+      "f1_macro": 0.7507367250316667,
+      "precision_macro": 0.7642315175306047,
+      "recall_macro": 0.7420261878205466
+    },
+    "etiquetas": [
+      "atraccion_turistica",
+      "hotel",
+      "mercado",
+      "museo",
+      "parque",
+      "restaurante",
+      "tour_aventura"
+    ],
+    "matriz_confusion": [
+      [
+        22,
+        2,
+        2,
+        5,
+        16,
+        3,
+        0
+      ],
+      [
+        3,
+        122,
+        1,
+        1,
+        6,
+        6,
+        0
+      ],
+      [
+        2,
+        0,
+        25,
+        1,
+        1,
+        3,
+        0
+      ],
+      [
+        2,
+        2,
+        0,
+        47,
+        23,
+        2,
+        6
+      ],
+      [
+        7,
+        6,
+        1,
+        13,
+        221,
+        3,
+        8
+      ],
+      [
+        1,
+        9,
+        1,
+        0,
+        0,
+        126,
+        0
+      ],
+      [
+        1,
+        2,
+        0,
+        1,
+        10,
+        1,
+        39
+      ]
+    ]
+  },
+  "conversaciones": [
+    {
+      "id": 1,
+      "modo": "con_rag",
+      "pregunta": "Que hoteles tienen buena atencion al cliente?",
+      "respuesta": "Los hoteles con buena atención al cliente según las reseñas son:  \n\n1. **Hotel Alajuela City**  \n   - Atención excelente  \n   - Personal amable y profesional  \n\n2. **Hotel Courtyard de Marriott • Alajuela**  \n   - Atención excelente  \n   - Servicio impecable  \n\n3. **Hotel Las Brumas**  \n   - Atención buena  \n   - Instalaciones adecuadas y cómodas  \n\n4. **Hotel Marriott Hacienda Belén**  \n   - Atención super profesional  \n   - Servicio en el restaurante (Carolina, Lorena y Joice) impecable  \n\n¿Qué servicios o detalles específicos mencionan las reseñas sobre atención al cliente?",
+      "categoria_predicha": "hotel",
+      "fuentes": [
+        {
+          "lugar": "Hotel Alajuela City",
+          "tipo_lugar": "hotel",
+          "score": 0.8246265649795532
+        },
+        {
+          "lugar": "Hotel Courtyard de Marriott • Alajuela",
+          "tipo_lugar": "hotel",
+          "score": 0.8055356740951538
+        },
+        {
+          "lugar": "Hotel Las Brumas",
+          "tipo_lugar": "hotel",
+          "score": 0.7990301251411438
+        },
+        {
+          "lugar": "Hotel Marriott Hacienda Belén",
+          "tipo_lugar": "hotel",
+          "score": 0.7978142499923706
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "modo": "con_rag",
+      "pregunta": "Dame otro del mismo tipo",
+      "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+      "categoria_predicha": "hotel",
+      "fuentes": [
+        {
+          "lugar": "Hotel Park View",
+          "tipo_lugar": "hotel",
+          "score": 0.7964046597480774
+        },
+        {
+          "lugar": "Cabañas Cerro Verde",
+          "tipo_lugar": "hotel",
+          "score": 0.7657236456871033
+        },
+        {
+          "lugar": "La Guaria Inn & Suites",
+          "tipo_lugar": "hotel",
+          "score": 0.7545068264007568
+        },
+        {
+          "lugar": "Hotel Hampton de Hilton • Alajuela",
+          "tipo_lugar": "hotel",
+          "score": 0.7486375570297241
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "modo": "con_rag",
+      "pregunta": "Y ese donde queda?",
+      "respuesta": "La ubicación de los hoteles mencionados en las reseñas son:  \n- **La Guaria Inn & Suites** se encuentra en Carriari, Alameda Cariari.  \n- **Hotel Hampton de Hilton • Alajuela** está en Alajuela.  \n- **Hotel Park View** no se menciona su ubicación en las reseñas.  \n\n¿Qué tipo de actividades o servicios adicionales mencionan las reseñas sobre ubicación?",
+      "categoria_predicha": "hotel",
+      "fuentes": [
+        {
+          "lugar": "Hotel Park View",
+          "tipo_lugar": "hotel",
+          "score": 0.7964046597480774
+        },
+        {
+          "lugar": "Cabañas Cerro Verde",
+          "tipo_lugar": "hotel",
+          "score": 0.7657236456871033
+        },
+        {
+          "lugar": "La Guaria Inn & Suites",
+          "tipo_lugar": "hotel",
+          "score": 0.7545068264007568
+        },
+        {
+          "lugar": "Hotel Hampton de Hilton • Alajuela",
+          "tipo_lugar": "hotel",
+          "score": 0.7486375570297241
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "modo": "con_rag",
+      "pregunta": "Que restaurantes destacan por su comida?",
+      "respuesta": "Los restaurantes destacados por su comida según las reseñas son:  \n\n1. **El Novillo Alegre Sabana**  \n   - Comida excelente  \n   - Ambiente elegante y sofisticado  \n\n2. **Enboca**  \n   - Comida excelente  \n   - Cocina contemporánea y platos pequeños para compartir  \n\n3. **Furca**  \n   - Comida excelente  \n   - Servicio impecable y lugar ideal para visitar  \n\n4. **La Criollita**  \n   - Comida excelente  \n   - Ambiente limpio y opciones variadas (consomé, postres, café)  \n\n¿Qué tipo de ambiente mencionan las reseñas sobre los restaurantes?",
+      "categoria_predicha": "restaurante",
+      "fuentes": [
+        {
+          "lugar": "El Novillo Alegre Sabana",
+          "tipo_lugar": "restaurante",
+          "score": 0.730912983417511
+        },
+        {
+          "lugar": "Enboca",
+          "tipo_lugar": "restaurante",
+          "score": 0.7277960181236267
+        },
+        {
+          "lugar": "Furca",
+          "tipo_lugar": "restaurante",
+          "score": 0.726936936378479
+        },
+        {
+          "lugar": "La Criollita",
+          "tipo_lugar": "restaurante",
+          "score": 0.725847601890564
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "modo": "con_rag",
+      "pregunta": "Recomiendame un parque con senderos bonitos",
+      "respuesta": "Los parques con senderos bonitos según las reseñas son:  \n\n1. **Parque Mora y Cañas**  \n   - Senderos bonitos  \n   - Ambiente lindo  \n\n2. **Parque Nacional Isla del Coco**  \n   - Senderos bonitos  \n   - El mejor parque  \n\n3. **Parque Nacional**  \n   - Senderos bien cuidados  \n   - Agradable para puntos de encuentro  \n\n4. **Parque Okayama**  \n   - Senderos para disfrutar de la naturaleza  \n\n¿Qué tipo de actividades o servicios adicionales mencionan las reseñas sobre parques?",
+      "categoria_predicha": "parque",
+      "fuentes": [
+        {
+          "lugar": "Parque Mora y Cañas",
+          "tipo_lugar": "parque",
+          "score": 0.8752785325050354
+        },
+        {
+          "lugar": "Parque Nacional Isla del Coco",
+          "tipo_lugar": "parque",
+          "score": 0.8654249906539917
+        },
+        {
+          "lugar": "Parque Nacional",
+          "tipo_lugar": "parque",
+          "score": 0.8491992950439453
+        },
+        {
+          "lugar": "Parque Okayama",
+          "tipo_lugar": "parque",
+          "score": 0.8471506834030151
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "modo": "con_rag",
+      "pregunta": "Que opinan de los museos en San Jose?",
+      "respuesta": "Los museos en San José según las reseñas son destacados por:  \n- **Arquitectura y exposiciones**: El Museo del Banco Central se describe como \"hermoso\" con arquitectura destacada y una visita obligatoria. El Museo del Jade tiene salas interactivas y colaboraciones con artistas. El Museo Nacional ofrece exposiciones históricas y instalaciones cuidadas. El Museo de Arte Costarricense destaca por su arte moderno, espacios limpios y personal amable.  \n- **Historia y valor cultural**: Todos mencionan la importancia del museo en la cultura costarricense.  \n- **Servicio y ambiente**: El personal se describe como atento y amable en varios casos.  \n\n¿Qué tipo de actividades o servicios adicionales mencionan las reseñas sobre los museos?",
+      "categoria_predicha": "museo",
+      "fuentes": [
+        {
+          "lugar": "Museos del Banco Central de Costa Rica",
+          "tipo_lugar": "museo",
+          "score": 0.81935715675354
+        },
+        {
+          "lugar": "Museo del Jade",
+          "tipo_lugar": "museo",
+          "score": 0.7935296297073364
+        },
+        {
+          "lugar": "Museo Nacional de Costa Rica",
+          "tipo_lugar": "museo",
+          "score": 0.7698712348937988
+        },
+        {
+          "lugar": "Museo de Arte Costarricense",
+          "tipo_lugar": "museo",
+          "score": 0.7650939226150513
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "modo": "con_rag",
+      "pregunta": "De que se quejan en los mercados artesanales?",
+      "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+      "categoria_predicha": "mercado",
+      "fuentes": [
+        {
+          "lugar": "Mercado Central de Heredia",
+          "tipo_lugar": "mercado",
+          "score": 0.5821669101715088
+        },
+        {
+          "lugar": "Mercado De Artesanías",
+          "tipo_lugar": "mercado",
+          "score": 0.5599958896636963
+        },
+        {
+          "lugar": "Mercado Florense",
+          "tipo_lugar": "mercado",
+          "score": 0.543560802936554
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "modo": "con_rag",
+      "pregunta": "Que experiencias recomiendan en los tours de aventura?",
+      "respuesta": "Los tours de aventura mencionan experiencias como **canyoning (canyoning)**, **rafting** y **fotografía profesional**. Las reseñas destacan la **seguridad**, **dinámica** y **servicio al cliente** como aspectos clave. Además, se menciona la **adrenalina** y **nuevos amigos** como parte de la experiencia. \n\n¿Qué tipo de tours específicos mencionan las reseñas?",
+      "categoria_predicha": "tour_aventura",
+      "fuentes": [
+        {
+          "lugar": "Pura Aventura Costa Rica",
+          "tipo_lugar": "tour_aventura",
+          "score": 0.751461923122406
+        },
+        {
+          "lugar": "Rio Celeste Aventuras - Tubing Rio Celeste",
+          "tipo_lugar": "tour_aventura",
+          "score": 0.7511122226715088
+        },
+        {
+          "lugar": "Maquique Adventure Costa Rica Canyoning Rafting",
+          "tipo_lugar": "tour_aventura",
+          "score": 0.7309862375259399
+        },
+        {
+          "lugar": "Arenal Rafting",
+          "tipo_lugar": "tour_aventura",
+          "score": 0.6814321279525757
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "modo": "con_rag",
+      "pregunta": "Que diferencia una reseña de un parque de una de un hotel?",
+      "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+      "categoria_predicha": "parque",
+      "fuentes": [
+        {
+          "lugar": "Parque Morazán",
+          "tipo_lugar": "parque",
+          "score": 0.6343802213668823
+        },
+        {
+          "lugar": "Parque Nacional Barra Honda",
+          "tipo_lugar": "parque",
+          "score": 0.6229873895645142
+        },
+        {
+          "lugar": "Parque Nacional Manuel Antonio",
+          "tipo_lugar": "parque",
+          "score": 0.6119908094406128
+        },
+        {
+          "lugar": "Parque España",
+          "tipo_lugar": "parque",
+          "score": 0.5958283543586731
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "modo": "con_rag",
+      "pregunta": "Cuanto cuesta un vuelo a Madrid?",
+      "respuesta": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+      "categoria_predicha": "hotel",
+      "fuentes": [
+        {
+          "lugar": "Hotel Courtyard de Marriott • Alajuela",
+          "tipo_lugar": "hotel",
+          "score": 0.504093587398529
+        }
+      ]
+    }
+  ],
+  "comparaciones_con_y_sin_rag": [
+    {
+      "pregunta": "Que hoteles tienen buena atencion al cliente?",
+      "respuesta_con_rag": "Los hoteles con buena atención al cliente según las reseñas son:  \n\n1. **Hotel Alajuela City**  \n   - Atención excelente  \n   - Personal amable y profesional  \n\n2. **Hotel Courtyard de Marriott • Alajuela**  \n   - Atención excelente  \n   - Servicio impecable  \n\n3. **Hotel Las Brumas**  \n   - Atención buena  \n   - Instalaciones adecuadas y cómodas  \n\n4. **Hotel Marriott Hacienda Belén**  \n   - Atención super profesional  \n   - Servicio en el restaurante (Carolina, Lorena y Joice) impecable  \n\n¿Qué servicios o detalles específicos mencionan las reseñas sobre atención al cliente?",
+      "fuentes_rag": [
+        {
+          "lugar": "Hotel Alajuela City",
+          "tipo_lugar": "hotel",
+          "score": 0.8246265649795532
+        },
+        {
+          "lugar": "Hotel Courtyard de Marriott • Alajuela",
+          "tipo_lugar": "hotel",
+          "score": 0.8055356740951538
+        },
+        {
+          "lugar": "Hotel Las Brumas",
+          "tipo_lugar": "hotel",
+          "score": 0.7990301251411438
+        },
+        {
+          "lugar": "Hotel Marriott Hacienda Belén",
+          "tipo_lugar": "hotel",
+          "score": 0.7978142499923706
+        }
+      ],
+      "respuesta_sin_rag": "Los hoteles que destacan por una buena atención al cliente suelen tener personal amable y dedicado, servicios eficientes, instalaciones limpias y bien mantenidas, y una reputación sólida en el sector. Además, ofrecen servicios adicionales como asistencia con reservas, atención 24 horas y ambientes que fomenten la comodidad y la satisfacción del huésped. La combinación de estos elementos, junto con una experiencia general positiva, indica un buen nivel de servicio."
+    },
+    {
+      "pregunta": "Recomiendame un parque con senderos bonitos",
+      "respuesta_con_rag": "Los parques con senderos bonitos según las reseñas son:  \n\n1. **Parque Mora y Cañas**  \n   - Senderos bonitos  \n   - Ambiente lindo  \n\n2. **Parque Nacional Isla del Coco**  \n   - Senderos bonitos  \n   - El mejor parque  \n\n3. **Parque Nacional**  \n   - Senderos bien cuidados  \n   - Agradable para puntos de encuentro  \n\n4. **Parque Okayama**  \n   - Senderos para disfrutar de la naturaleza  \n\n¿Qué tipo de actividades o servicios adicionales mencionan las reseñas sobre parques?",
+      "fuentes_rag": [
+        {
+          "lugar": "Parque Mora y Cañas",
+          "tipo_lugar": "parque",
+          "score": 0.8752785325050354
+        },
+        {
+          "lugar": "Parque Nacional Isla del Coco",
+          "tipo_lugar": "parque",
+          "score": 0.8654249906539917
+        },
+        {
+          "lugar": "Parque Nacional",
+          "tipo_lugar": "parque",
+          "score": 0.8491992950439453
+        },
+        {
+          "lugar": "Parque Okayama",
+          "tipo_lugar": "parque",
+          "score": 0.8471506834030151
+        }
+      ],
+      "respuesta_sin_rag": "Un parque con senderos bonitos podría ser el **Parque Nacional de los Andes** (en Estados Unidos), conocido por sus senderos que ofrecen vistas de montañas, valles y ríos. O, si prefieres un lugar más cercano, el **Parque Nacional de Yosemite** (Estados Unidos) tiene senderos como el **Mist Trail**, que ofrece paisajes espectaculares. También podrías considerar el **Parque Nacional de Acadia** (Estados Unidos), donde los senderos como el **Cape Cod Trail** ofrecen vistas de playas y montañas. Sin embargo, si buscas algo más tranquilo, el **Parque Nacional de las Sierras del Grand Canyon** tiene senderos como el **South Rim Trail**, con vistas de las mesas y valles. ¡Espero que te sirva!"
+    },
+    {
+      "pregunta": "De que se quejan en los mercados artesanales?",
+      "respuesta_con_rag": "No tengo información suficiente en las reseñas recuperadas para responder esa pregunta.",
+      "fuentes_rag": [
+        {
+          "lugar": "Mercado Central de Heredia",
+          "tipo_lugar": "mercado",
+          "score": 0.5821669101715088
+        },
+        {
+          "lugar": "Mercado De Artesanías",
+          "tipo_lugar": "mercado",
+          "score": 0.5599958896636963
+        },
+        {
+          "lugar": "Mercado Florense",
+          "tipo_lugar": "mercado",
+          "score": 0.543560802936554
+        }
+      ],
+      "respuesta_sin_rag": "En los mercados artesanales, los consumidores a menudo se quejan de la **calidad de los productos** (como la falta de habilidad o materiales de primera calidad), **precios altos** que no coinciden con el valor, **falta de información sobre la autenticidad o el origen de los productos**, y **condiciones de trabajo insuficientes**. Además, pueden sentirse decepcionados por la **diferencia entre lo que se promete y lo que se entrega**."
+    }
+  ],
+  "nota_metodologica": "Las respuestas con RAG incluyen las fuentes recuperadas. Las respuestas sin RAG se generaron con el mismo modelo local sin contexto del corpus."
+}
